@@ -19,8 +19,8 @@ document.setContent('Hello World!!!');
 document.setFontName('Comic Sans');
 document.setFontSize(14);
 
-document.printState();
+console.log('current state:\n', document.toString());
 
 document.restore(history.pop());
 
-document.printState();
+console.log('current state after restore:\n', document.toString());

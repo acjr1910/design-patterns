@@ -15,11 +15,7 @@ export default class TextDocument {
   }
 
   public toString(): string {
-    return `TextDocument: {
-      content=${this.content},
-      fontName=${this.fontName},
-      fontSize=${this.fontSize}
-    }`;
+    return `{ content=${this.content}, fontName=${this.fontName}, fontSize=${this.fontSize} }`;
   }
 
   public createState() {
