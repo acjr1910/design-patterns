@@ -1,3 +1,5 @@
+// Client
+
 import TextDocument from "./TextDocument";
 import TextDocumentHistory from "./TextDocumentHistory";
 

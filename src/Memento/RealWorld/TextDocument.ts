@@ -1,3 +1,5 @@
+// Originator
+
 import TextDocumentState, { ITextDocumentState } from "./TextDocumentState";
 
 export default class TextDocument {
@@ -18,7 +20,7 @@ export default class TextDocument {
     return `{ content=${this.content}, fontName=${this.fontName}, fontSize=${this.fontSize} }`;
   }
 
-  public createState() {
+  public createState(): ITextDocumentState {
     return new TextDocumentState(this.content, this.fontName, this.fontSize);
   }
 
@@ -26,7 +28,6 @@ export default class TextDocument {
     this.content = state.getContent();
     this.fontName = state.getFontName();
     this.fontSize = state.getFontSize();
-
   }
 
   public getContent(): string {

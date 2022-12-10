@@ -1,4 +1,4 @@
-import TextDocumentHistory from "./TextDocumentHistory";
+// Memento
 
 export interface ITextDocumentState {
   getContent(): string,

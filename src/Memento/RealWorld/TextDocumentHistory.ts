@@ -1,3 +1,5 @@
+// Caretaker
+
 import { ITextDocumentState } from "./TextDocumentState";
 
 export default class TextDocumentHistory {
