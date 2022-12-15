@@ -1,7 +1,7 @@
 // Client
 
-import TextDocument from "./TextDocument";
-import TextDocumentHistory from "./TextDocumentHistory";
+import TextDocument from './TextDocument';
+import TextDocumentHistory from './TextDocumentHistory';
 
 const document = new TextDocument('', 'Helvetica', 12);
 const history = new TextDocumentHistory();

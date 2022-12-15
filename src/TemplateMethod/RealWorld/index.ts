@@ -1,5 +1,5 @@
-import Window from "./Window";
-import ChatWindow from "./ChatWindow";
+import Window from './Window';
+import ChatWindow from './ChatWindow';
 
 const window = new Window();
 window.close();

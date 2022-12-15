@@ -1,41 +1,41 @@
-import Product from "./Product";
-import { IIterator } from "./@interfaces/Iterator";
+import Product from './Product';
+import { IIterator } from './@interfaces/Iterator';
 
 class ArrayIterator implements IIterator<Product> {
-  private index: number;
+    private index: number;
 
-  private collection: ProductCollection;
+    private collection: ProductCollection;
 
-  constructor(collection: ProductCollection) {
-    this.index = 0;
-    this.collection = collection;
-  }
+    constructor(collection: ProductCollection) {
+        this.index = 0;
+        this.collection = collection;
+    }
 
-  hasNext() {
-    return this.index < this.collection.getProducts().length;
-  }
+    hasNext() {
+        return this.index < this.collection.getProducts().length;
+    }
 
-  current() {
-    return this.collection.getProducts()[this.index];
-  }
+    current() {
+        return this.collection.getProducts()[this.index];
+    }
 
-  next() {
-    this.index++;
-  }
+    next() {
+        this.index = this.index + 1;
+    }
 }
 
 export default class ProductCollection {
-  private products: Product[] = [];
+    private products: Product[] = [];
 
-  public add(product: Product): void {
-    this.products.push(product);
-  }
+    public add(product: Product): void {
+        this.products.push(product);
+    }
 
-  public getProducts(): Product[] {
-    return this.products;
-  }
+    public getProducts(): Product[] {
+        return this.products;
+    }
 
-  public createIterator(): IIterator<Product> {
-    return new ArrayIterator(this);
-  }
+    public createIterator(): IIterator<Product> {
+        return new ArrayIterator(this);
+    }
 }

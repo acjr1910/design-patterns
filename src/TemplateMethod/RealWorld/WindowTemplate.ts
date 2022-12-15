@@ -1,13 +1,13 @@
 export default class WindowTemplate {
-  public close(): void {
-    this.onClosing();
+    public close(): void {
+        this.onClosing();
 
-    console.log('Executing required operations for all windows');
+        console.log('Executing required operations for all windows');
 
-    this.onClosed();
-  };
+        this.onClosed();
+    }
 
-  protected onClosing(): void {}
+    protected onClosing(): void {}
 
-  protected onClosed(): void {}
+    protected onClosed(): void {}
 }

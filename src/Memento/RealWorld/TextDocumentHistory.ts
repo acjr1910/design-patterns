@@ -1,15 +1,15 @@
 // Caretaker
 
-import { ITextDocumentState } from "./TextDocumentState";
+import { ITextDocumentState } from './TextDocumentState';
 
 export default class TextDocumentHistory {
-  private states: ITextDocumentState[] = [];
+    private states: ITextDocumentState[] = [];
 
-  push(state: ITextDocumentState) {
-    this.states.push(state);
-  }
+    push(state: ITextDocumentState) {
+        this.states.push(state);
+    }
 
-  pop() {
-    return this.states.pop();
-  }
+    pop() {
+        return this.states.pop();
+    }
 }

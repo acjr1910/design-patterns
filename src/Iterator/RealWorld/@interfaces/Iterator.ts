@@ -1,5 +1,5 @@
 export interface IIterator<T> {
-  current(): T,
-  next(): void,
-  hasNext(): boolean,
+    current(): T;
+    next(): void;
+    hasNext(): boolean;
 }

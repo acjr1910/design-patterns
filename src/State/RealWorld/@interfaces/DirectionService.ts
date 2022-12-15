@@ -1,6 +1,6 @@
-import ITravelMode from "./TravelMode";
+import TravelMode from './TravelMode';
 
 export default interface IDirectionService extends ITravelMode {
-  getTravelMode(): ITravelMode,
-  setTravelMode(state: ITravelMode): void,
+    getTravelMode(): ITravelMode;
+    setTravelMode(state: ITravelMode): void;
 }

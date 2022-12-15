@@ -1,27 +1,27 @@
-import ITravelMode from "./@interfaces/TravelMode";
-import IDirectionService from "./@interfaces/DirectionService";
+import TravelMode from './@interfaces/TravelMode';
+import DirectionService from './@interfaces/DirectionService';
 
 export default class DirectionService implements IDirectionService {
-  private travelMode: ITravelMode;
+    private travelMode: ITravelMode;
 
-  constructor(travelMode: ITravelMode) {
-    this.travelMode = travelMode;
-  }
+    constructor(travelMode: ITravelMode) {
+        this.travelMode = travelMode;
+    }
 
-  public getEta() {
-    return this.travelMode.getEta();
-  }
-  
-  public getDirection() {
-    return this.travelMode.getDirection();
-  }
-  
-  public getTravelMode() {
-    return this.travelMode;
-  }
-  
-  public setTravelMode(state: ITravelMode) {
-    console.log(`State Context: Transitioning to ${(<any>state).constructor.name}.`);
-    this.travelMode = state;
-  }
+    public getEta() {
+        return this.travelMode.getEta();
+    }
+
+    public getDirection() {
+        return this.travelMode.getDirection();
+    }
+
+    public getTravelMode() {
+        return this.travelMode;
+    }
+
+    public setTravelMode(state: ITravelMode) {
+        console.log(`State Context: Transitioning to ${(<any>state).constructor.name}.`);
+        this.travelMode = state;
+    }
 }
